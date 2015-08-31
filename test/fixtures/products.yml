@@ -11,3 +11,13 @@ two:
   description: MyText
   image_url: MyString
   price: 9.99
+
+myo:
+  title: Myo's Autobiography
+  description:
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Veniam saepe excepturi, aliquid accusamus sint qui facere, 
+    in, architecto blanditiis, minima veritatis. Distinctio numquam 
+    earum quas, ea, ipsum atque. Id, ipsam!
+  price: 19.99
+  image_url: auto.png
