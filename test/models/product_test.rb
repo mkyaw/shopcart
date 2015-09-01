@@ -5,6 +5,7 @@ class ProductTest < ActiveSupport::TestCase
   
   test "product attributes must not be empty" do
     product = Product.new
+    # empty product model will not pass the valid() test
     assert product.invalid?
     assert product.errors[:title].any?
     assert product.errors[:description].any?
@@ -39,8 +40,7 @@ class ProductTest < ActiveSupport::TestCase
                   image_url: image_url)
     end
 
-    ok = %w{ jack.gif jack.jpg jack.png JACK.gif JACK.Png
-            http://a.b.c/x/y/z/jack.gif }
+    ok = %w{ jack.gif jack.jpg jack.png JACK.gif JACK.Png http://a.b.c/x/y/z/jack.gif }
     
     bad = %w{ jack.doc jack.gif/more jack.gif.more }
     
